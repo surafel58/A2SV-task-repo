@@ -1,0 +1,7 @@
+npm install lodash
+
+npm update loadsh
+
+npm uninstall lodash
+
+npm lodash --version
