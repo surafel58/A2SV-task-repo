@@ -17,11 +17,16 @@ button {
   cursor: pointer;
   font-size: 2em;
   border-radius: 2em;
+  transition: 0.5s ease;
 }
 
 .buttons {
   
   display: flex;
   gap: 5em;
+}
+
+button:hover {
+  box-shadow: 3px 3px;
 }
 
