@@ -1,0 +1,27 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+}
+
+p {
+  font-size: 10em;
+}
+
+button {
+  background-color: lightblue;
+  width: 10em;
+  height: auto;
+  cursor: pointer;
+  font-size: 2em;
+  border-radius: 2em;
+}
+
+.buttons {
+  
+  display: flex;
+  gap: 5em;
+}
+
