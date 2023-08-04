@@ -9,15 +9,22 @@
     margin: 2em;
 }
 
+.card_content
+{
+    display: flex;
+    flex-direction: column;
+    background-color: goldenrod;
+    border-radius: 1em;
+    transition: 0.5s ease;
+    padding: 1.5em;
+}
+
 .card{
     display: flex;
     gap: 1em;
     align-items:flex-end;
-    background-color: goldenrod;
-    border-radius: 1em;
-    padding: 3em;
+    padding: 1em;
     justify-content: center;
-    transition: 0.5s ease;
 }
 
 .card li {
@@ -28,12 +35,21 @@
 .card li b{
     font-family: 'Crimson Text', serif;
 }
-.card:hover{
+
+.card_content .contact_icons{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 2em;
+}
+
+
+.card_content:hover{
     box-shadow: 5px 5px;
     cursor: pointer;
 }
 @media (max-width: 700px) {
-    .card{
+    .card_content{
         width: 100%;
     }
   }

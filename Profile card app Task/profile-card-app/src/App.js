@@ -12,10 +12,17 @@ function App() {
   //fetch profile data
   useEffect(() => {
     fetch('https://dummyjson.com/users/?limit=6')
-    .then(res => res.json())
+    .then(res => {
+
+      if (!res.ok) throw Error('Resource is not found');
+      return res.json();
+    })
     .then(json => {
+      //set profile state and set error to null
       setProfiles(json);
-    }).catch(err => {setError(err)})
+      setError(null);
+    
+    }).catch(err => {setError(err.message)})
   }, []);
 
   return (
@@ -24,7 +31,7 @@ function App() {
       <h1>Profile List</h1>
       <hr style={{width: '80%'}}/>
       {/* show error message if error exists */}
-      {error && <p>Something went wrong...</p>}
+      {error && <p>{error}</p>}
 
       {/* show profile list if no error exists*/}
       {!error && profiles && <ProfileList profiles={profiles.users} />}
