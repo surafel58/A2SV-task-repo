@@ -1,0 +1,26 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Online MBA",
+      "content": "Pursuing an Online MBA from SRM IST aligns perfectly with my career goals. The university's reputation for academic excellence and technological innovation make it an ideal choice. The program's flexibility allows me to balance studies with work, gaining valuable knowledge without interrupting my career. The curriculum's focus on industry trends and practical insights will provide a competitive edge. Collaborating with diverse professionals globally will broaden my perspectives and expand my network. Online learning, esteemed faculty, and technological resources ensure a high-quality experience. My decision is fueled by the desire to grow personally and professionally, taking on leadership roles and making significant contributions to organizations. SRM IST's prestige and forward-thinking approach excite me for this transformative journey.",
+      "date": "1/2/2015"
+    },
+    {
+      "id": 2,
+      "title": "Application of IoT",
+      "content": "The application of IoT in manufacturing brings several benefits, including improved operational efficiency, enhanced productivity, optimized maintenance schedules, reduced downtime, better inventory management, enhanced product quality, and increased safety. It enables manufacturers to gain greater visibility and control over their processes, leading to cost savings, faster time to market, and a competitive edge in the industry.",
+      "date": "1/2/2015"
+    },
+    {
+      "title": "A2SV",
+      "content": "lorem ipsum ...",
+      "id": 3
+    },
+    {
+      "title": ";lasd",
+      "content": "asmas,",
+      "id": 4
+    }
+  ]
+}
