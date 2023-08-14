@@ -1,6 +1,6 @@
 "use client";
 import styles from "./blogdetail.module.css";
-import { usePathname, useRouter  } from 'next/navigation';
+import { usePathname, useRouter, useParams  } from 'next/navigation';
 
 const fetchBlog = async (id) => {
     const response = await fetch('http://localhost:8000/blogs/' + id, {cache: "no-cache"});
@@ -16,8 +16,8 @@ const deleteBlogs = async (id) => {
 const BlogDetail = async ({params}) => {
     
     const router = useRouter();
-    const {pathname} = usePathname;
     const blog = await fetchBlog(params.id);
+
 
     return ( 
         
@@ -28,13 +28,7 @@ const BlogDetail = async ({params}) => {
                 <p>Date: {blog.date}</p>
                 <p>{blog.content}</p>
                 <button onClick={(e) => {
-                    router.push(pathname + "/edit", {
-                        query:{
-                            title: blog.title,
-                            content: blog.content,
-                            id: blog.id
-                        }
-                    });
+                    router.push(`${params.id}/edit`);
                 }}>Edit</button>
                 <button onClick={(e) => {
                     deleteBlogs(params.id);

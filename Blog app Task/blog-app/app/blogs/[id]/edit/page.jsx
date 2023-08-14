@@ -1,32 +1,25 @@
 "use client";
-import {useRouter  } from 'next/navigation';
+import {useParams, useRouter  } from 'next/navigation';
 import styles from "./editform.module.css";
 import { useState } from "react";
 
+const fetchBlog = async (id) => {
+  const response = await fetch('http://localhost:8000/blogs/' + id , {cache: "no-cache"});
+  const data = await response.json();
+  return data
+}
 
-const EdtForm = () => {
+const EdtForm = async() => {
 
-  const router = useRouter();
-  const {query: {
-    blog_title,
-    blog_content,
-    id
-  }} = router;
 
-  const props = {
-    blog_title,
-    blog_content,
-    id
-  }
-  
-  
-  console.log(blog_title);
-  const [title, setTitle] = useState(props.blog_title);
-  const [content, setContent] = useState(props.blog_content);
+  const {current_title, current_content} = await fetchBlog(params.id);
+
+  const [title, setTitle] = useState(current_title);
+  const [content, setContent] = useState(current_content);
 
 
   const editBlog = async (data) => {
-    fetch('http://localhost:8000/blogs/', {
+    fetch('http://localhost:8000/blogs/'+params.id, {
      method: "PUT",
      cache: "no-cache",
      headers: {
