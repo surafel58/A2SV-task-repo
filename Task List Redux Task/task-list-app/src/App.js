@@ -10,6 +10,15 @@ function App() {
   const dispatch = useDispatch();
   const [input_task, setInputTask] = useState("");
   
+  console.log("tasks", tasks);
+
+  const handleTaskAdd = () => {
+    if (input_task.length > 0) {
+      dispatch(taskAdd(
+        {id:nanoid(), content:input_task, isComplete: false}
+      ))
+      setInputTask("")}
+  }
 
   return (
     <div className="App">
@@ -19,14 +28,8 @@ function App() {
 
       <div className="flex flex-col gap-9 items-center justify-center mt-6">
         <div className="task_input flex items-start">
-          <textarea className="border-red-900 border-2 rounded" type="text" value={input_task} onChange={e => {setInputTask(e.target.value)}}/>
-          <button className=" bg-red-900 rounded-full p-2 ml-3 text-white" onClick= {e => {
-            if (input_task.length > 0) {
-            dispatch(taskAdd(
-              {id:nanoid(), content:input_task, isComplete: false}
-            ))
-            setInputTask("")}
-          }}>Add</button>
+          <textarea className="border-red-900 border-2 rounded" type="text" value={input_task} data-testid = "input_text_area" onChange={e => {setInputTask(e.target.value)}}/>
+          <button className=" bg-red-900 rounded-full p-2 ml-3 text-white" data-testid = "add_btn" onClick= {handleTaskAdd}>Add</button>
         </div>
         {/* task list */}
         {tasks && <TaskList tasks={tasks}/>}

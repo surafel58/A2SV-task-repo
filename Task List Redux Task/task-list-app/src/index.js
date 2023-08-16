@@ -19,5 +19,4 @@ root.render(
 // expose store when run in Cypress
 if (window.Cypress) {
   window.store = store;
-  console.log(window.store);
 }

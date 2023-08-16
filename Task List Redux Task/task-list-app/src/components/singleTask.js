@@ -11,7 +11,7 @@ const SingleTask = (props) => {
     //each task is rendered
     return ( 
         
-        <div className="single_task p-3 rounded border-red-900 border-2 flex justify-between gap-3" key={task.id}>
+        <div className="single_task p-3 rounded border-red-900 border-2 flex justify-between gap-3" key={task.id} data-testid = "single_task">
 
               {!isEdit ? 
               
