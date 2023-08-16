@@ -20,17 +20,15 @@ const editBlog = async (data, id, router) => {
     },
     body: JSON.stringify(data),
   });
-
   router.push("/");
 };
 
-const EdtForm = async () => {
+const EdtForm = () => {
   const params = useSearchParams();
   const id = params.get("id");
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const router = useRouter();
-  const titleRef = useRef();
 
   useEffect(() => {
     let blog;
@@ -67,7 +65,6 @@ const EdtForm = async () => {
       <div className={styles.blog_form_inputs}>
         <label>Blog title: </label>{" "}
         <input
-          ref={titleRef}
           required
           type="text"
           name="title"

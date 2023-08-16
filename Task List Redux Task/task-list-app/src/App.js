@@ -21,10 +21,11 @@ function App() {
         <div className="task_input flex items-start">
           <textarea className="border-red-900 border-2 rounded" type="text" value={input_task} onChange={e => {setInputTask(e.target.value)}}/>
           <button className=" bg-red-900 rounded-full p-2 ml-3 text-white" onClick= {e => {
+            if (input_task.length > 0) {
             dispatch(taskAdd(
-            {id:nanoid(), content:input_task, isComplete: false}
-          ))
-          setInputTask("");
+              {id:nanoid(), content:input_task, isComplete: false}
+            ))
+            setInputTask("")}
           }}>Add</button>
         </div>
         {/* task list */}

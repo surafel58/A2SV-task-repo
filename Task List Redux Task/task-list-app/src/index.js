@@ -15,3 +15,9 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
+
+// expose store when run in Cypress
+if (window.Cypress) {
+  window.store = store;
+  console.log(window.store);
+}
