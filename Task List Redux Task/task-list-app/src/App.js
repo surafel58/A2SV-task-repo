@@ -10,8 +10,6 @@ function App() {
   const dispatch = useDispatch();
   const [input_task, setInputTask] = useState("");
   
-  console.log("tasks", tasks);
-
   const handleTaskAdd = () => {
     if (input_task.length > 0) {
       dispatch(taskAdd(

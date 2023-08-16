@@ -1,16 +1,16 @@
 {
   "blogs": [
     {
-      "id": 1,
-      "title": "Online MBA ",
-      "content": "Pursuing an Online MBA from SRM IST aligns perfectly with my career goals. The university's reputation for academic excellence and technological innovation make it an ideal choice. The program's flexibility allows me to balance studies with work, gaining valuable knowledge without interrupting my career. The curriculum's focus on industry trends and practical insights will provide a competitive edge. Collaborating with diverse professionals globally will broaden my perspectives and expand my network. Online learning, esteemed faculty, and technological resources ensure a high-quality experience. My decision is fueled by the desire to grow personally and professionally, taking on leadership roles and making significant contributions to organizations. SRM IST's prestige and forward-thinking approach excite me for this transformative journey.",
-      "date": "15/7/2023"
-    },
-    {
       "id": "49",
       "title": "klamsd",
       "content": "alksdm as",
       "date": "14/7/2023"
+    },
+    {
+      "id": "123",
+      "title": "ABCD",
+      "content": "llre masdas",
+      "date": "16/7/2023"
     }
   ]
 }
